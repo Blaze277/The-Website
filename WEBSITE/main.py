@@ -7,7 +7,7 @@ def kelvin_to_celsius(kelvin):
 
 expression = ""
 app = Flask(__name__)
-app.secret_key = os.getenv("FLASK_SECRET_KEY")
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "dev-only-key")
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -91,3 +91,4 @@ def projects():
 if __name__  == "__main__":
 
     app.run(debug=True)
+
