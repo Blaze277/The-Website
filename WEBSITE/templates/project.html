@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% block body %}
+
+<div>
+  <h1 class="title" align="center">THE PROJECTS</h1>
+  <p class="quote" align="center">
+    “If it looks reckless, you’re missing the math.”
+  </p>
+</div>
+
+<div class="content-1">
+  <div class="weather" align="center">
+    <h1>API WEATHER APP</h1>
+
+    <form method="POST">
+      <input type="hidden" name="form_type" value="weather" />
+      <input type="text" name="city" placeholder="Enter city" required />
+      <button type="submit">Check</button>
+    </form>
+
+    {% if content %}
+    <p class="result">Weather: {{ content }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="content-1">
+  <div class="project-card">
+    <div class="project-header">
+      <h2>Neural Network — From Scratch</h2>
+      <a
+        class="github-link"
+        href="https://github.com/Blaze277/Neural-network"
+        target="_blank"
+      >
+        GitHub ↗
+      </a>
+    </div>
+
+    <p class="tag">Machine Learning • Python • NumPy</p>
+
+    <div class="project-details">
+      <p>
+        A neural network implemented from scratch to understand how learning,
+        backpropagation, and optimization work without relying on high-level ML
+        frameworks.
+      </p>
+
+      <ul>
+        <li>Custom neuron & layer classes</li>
+        <li>Manual forward & backward propagation</li>
+        <li>Cross-entropy loss with gradient calculation</li>
+        <li>Self-improving training loop with best-weight tracking</li>
+      </ul>
+      <p class="label">p.s. alot of useful and useless things were learned</p>
+    </div>
+  </div>
+</div>
+<div class="sticker" id="stick2">
+  <img src="me.jpg" alt="me2" />
+</div>
+<div class="content-1">
+  <div id="calculator">
+    <div class="calculator" align="center">
+      <form method="POST" action="#calculator">
+        <input type="hidden" name="form_type" value="calculator" />
+        <div class="display">
+          <input type="text" value="{{ display }}" disabled readonly />
+        </div>
+        <div class="buttons">
+          <button class="btn op" name="action" value="clear">C</button>
+          <button class="btn op" name="input" value="/">÷</button>
+          <button class="btn op" name="input" value="*">×</button>
+          <button class="btn op" name="input" value="+">+</button>
+          <button class="btn" name="input" value="1">1</button>
+          <button class="btn" name="input" value="2">2</button>
+          <button class="btn" name="input" value="3">3</button>
+          <button class="btn op" name="input" value="-">−</button>
+          <button class="btn" name="input" value="4">4</button>
+          <button class="btn" name="input" value="5">5</button>
+          <button class="btn" name="input" value="6">6</button>
+          <button class="btn equal" name="action" value="equals">=</button>
+          <button class="btn" name="input" value="7">7</button>
+          <button class="btn" name="input" value="8">8</button>
+          <button class="btn" name="input" value="9">9</button>
+          <button class="btn zero" name="input" value="0">0</button>
+          <button class="btn" name="input" value=".">.</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
