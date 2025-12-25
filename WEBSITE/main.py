@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, session
 import datetime as dt
 import requests
-import tkinter as tk
 import os
 def kelvin_to_celsius(kelvin):
     return kelvin - 273.15
@@ -90,4 +89,5 @@ def projects():
 
 
 if __name__  == "__main__":
+
     app.run(debug=True)
