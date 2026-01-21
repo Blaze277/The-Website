@@ -1,5 +1,5 @@
 flask
-os
+
 gunicorn
 datetime
 yfinance 
@@ -9,3 +9,4 @@ json
 pandas
 time
 dotenv
+
