@@ -7,7 +7,8 @@ requests
 plotly
 
 pandas
-time
+
 dotenv
+
 
 
