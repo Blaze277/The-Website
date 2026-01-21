@@ -33,7 +33,7 @@ def safe_download(ticker, retries=2):
             return yf.download(ticker, period="1y", progress=False)
         except Exception as e:
             print(f"Retry {attempt+1}/{retries} for {ticker}: {e}")
-            time.sleep(2)  # wait a sec
+            time.sleep(3)  # wait a sec
     return pd.DataFrame()
 
 def info(ticker,strength,trend):
@@ -166,7 +166,7 @@ def stocks():
             try:
                 
                 data = yf.download(ticker, period="1y", progress=False)
-                time.sleep(2.5)
+                time.sleep(4.5)
                 print(f"DEBUG: {ticker} - columns: {data.columns.tolist()}")
 
                 # Detect and flatten if MultiIndex (the real fix)
@@ -295,5 +295,6 @@ def stocks():
 if __name__  == "__main__":
 
     app.run(debug=True)
+
 
 
