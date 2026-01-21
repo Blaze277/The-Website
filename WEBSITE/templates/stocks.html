@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block body %}
+
+<section class="about">
+  <h1 class="title" align="center">THE STOCKS</h1>
+  <p class="quote" align="center">
+    “Stocks look fun, atleast till you don't lose money on NFTs”
+  </p>
+  <div class="sticker" id="stick1">
+    <img src="me.jpg" alt="me" />
+  </div>
+</section>
+
+<div class="content-1">
+  <div class="project card">
+    <h2>Stock Roast Dashboard 🚀</h2>
+    <p>
+      Disclaimer: This is for fun/learning only — not real advice, markets can
+      mess with you anytime.
+    </p>
+  </div>
+</div>
+
+<div>
+  <div>
+    <div class="stock-check">
+      <form method="POST">
+        <input type="hidden" name="form_type" value="stocks" />
+        <button type="submit">Scan for Moon Shots</button>
+      </form>
+    </div>
+    <div class="stock-check">
+      {% if form_type == "stocks" or bullish_stocks %}
+      <h3>Stock Results</h3>
+      {% if bullish_stocks %} {% for graph in graphs %} {{ graph | safe }} {%
+      endfor %} {% else %}
+      <p>
+        No moon shots today — all sideways or bearish af. Try again tomorrow,
+        yaar.
+      </p>
+      {% endif %} {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
