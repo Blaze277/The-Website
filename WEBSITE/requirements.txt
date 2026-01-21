@@ -5,10 +5,11 @@ datetime
 yfinance 
 requests
 plotly
-
+groq
 pandas
 
 dotenv
+
 
 
 
