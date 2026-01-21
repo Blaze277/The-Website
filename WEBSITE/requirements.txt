@@ -5,8 +5,9 @@ datetime
 yfinance 
 requests
 plotly
-json
+
 pandas
 time
 dotenv
+
 
