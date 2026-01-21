@@ -166,7 +166,7 @@ def stocks():
             try:
                 
                 data = yf.download(ticker, period="1y", progress=False)
-                time.sleep(1.5)
+                time.sleep(2.5)
                 print(f"DEBUG: {ticker} - columns: {data.columns.tolist()}")
 
                 # Detect and flatten if MultiIndex (the real fix)
@@ -295,4 +295,5 @@ def stocks():
 if __name__  == "__main__":
 
     app.run(debug=True)
+
 
