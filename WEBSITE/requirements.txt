@@ -2,4 +2,6 @@ flask
 os
 gunicorn
 datetime
+yfinance 
 requests
+plotly
