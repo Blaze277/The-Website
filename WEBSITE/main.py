@@ -158,8 +158,8 @@ def stocks():
     if form_type == "stocks" and request.method == "POST":
         print("DEBUG: Entered stocks block")
         watchlist = ["RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "INFY.NS", "ICICIBANK.NS",
-    "BHARTIARTL.NS", "SBIN.NS", "HINDUNILVR.NS",
-    "AXISBANK.NS", "KOTAKBANK.NS", "BAJFINANCE.NS", "MARUTI.NS"]  # small for fast testing
+    "BHARTIARTL.NS", "SBIN.NS", 
+    "AXISBANK.NS", "KOTAKBANK.NS", "BAJFINANCE.NS"]  # small for fast testing
         
         for ticker in watchlist:
             print(f"DEBUG: Starting {ticker}")
@@ -295,6 +295,7 @@ def stocks():
 if __name__  == "__main__":
 
     app.run(debug=True)
+
 
 
 
