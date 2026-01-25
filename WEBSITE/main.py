@@ -33,7 +33,7 @@ def safe_download(ticker, retries=2):
             return yf.download(ticker, period="1y", progress=False)
         except Exception as e:
             print(f"Retry {attempt+1}/{retries} for {ticker}: {e}")
-            time.sleep(3)  # wait a sec
+            time.sleep(5)  # wait a sec
     return pd.DataFrame()
 
 def info(ticker,strength,trend):
@@ -159,7 +159,7 @@ def stocks():
         print("DEBUG: Entered stocks block")
         watchlist = ["RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "INFY.NS", "ICICIBANK.NS",
     "BHARTIARTL.NS", "SBIN.NS", 
-    "AXISBANK.NS", "KOTAKBANK.NS", "BAJFINANCE.NS"]  # small for fast testing
+    "AXISBANK.NS", "KOTAKBANK.NS"]  # small for fast testing
         
         for ticker in watchlist:
             print(f"DEBUG: Starting {ticker}")
@@ -295,6 +295,7 @@ def stocks():
 if __name__  == "__main__":
 
     app.run(debug=True)
+
 
 
 
